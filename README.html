@@ -11,13 +11,13 @@
     <li>github.new</li>
     <li>Name repository eleventy-github</li>
     <li>Add a README file</li>
-    <li>Click green “Create Repository” button</li>
-    <li>Click the plus sign and select “New codespace”, and select your new “eleventy-github” repository in the dropdown, then select the green “Create codespace” button OR Click the green “<>Code” dropdown and select the right “Codespaces” tab and the green “Create codespace on main” button</li>
+    <li>Click green "Create Repository" button</li>
+    <li>Click the plus sign and select "New codespace", and select your new "eleventy-github" repository in the dropdown, then select the green "Create codespace" button OR Click the green "<>Code" dropdown and select the right "Codespaces" tab and the green "Create codespace on main" button</li>
     <li>Your codespace will open with Explorer to the left, Preview to the right, and Terminal at the bottom. You can toggle this view as needed with the icons in the top right</li>
     <li>In your Terminal, copy and paste $ npm init -y and hit enter. This will create a package.json file</li>
     <li>Next copy and paste  npm install @11ty/eleventy@latest sass@latest --save-exact and hit enter. This will install Eleventy, create a node_modules folder, and a package-lock.json file.</li>
     <li>In the Explorer, select the new package.json file.</li>
-    <li>Highlight line 7, the “test” script and replace with the following (check indenting) 
+    <li>Highlight line 7, the "test" script and replace with the following (check indenting) 
       <code><pre>
         "watch:sass": "sass src/static/scss:public/static/css --watch",
         "build:sass": "sass src/static/scss:public/static/css",
@@ -27,10 +27,10 @@
         "build": "npm run build:eleventy & npm run build:sass"
       </pre></code>
     </li>
-    <li>Create a new “src” folder by clicking on the folder+ button in explorer</li>
-    <li>Inside your new “src” folder create two subfolders: “_includes” and “static”</li>
-    <li>Inside your new “static” folder, create a new “scss” folder</li>
-    <li>Next create a new file “.eleventy.js” in the root directory with the following code: 
+    <li>Create a new "src" folder by clicking on the folder+ button in explorer</li>
+    <li>Inside your new "src" folder create two subfolders: "_includes" and "static"</li>
+    <li>Inside your new "static" folder, create a new "scss" folder</li>
+    <li>Next create a new file ".eleventy.js" in the root directory with the following code: 
       <code><pre>module.exports = function (eleventyConfig) {
   eleventyConfig.setBrowserSyncConfig({
     files: './public/static/**/*.css',
@@ -45,7 +45,7 @@
 };
       </pre></code>
     </li>
-    <li>Create an empty file named “main.scss” in the static/scss folder</li>
+    <li>Create an empty file named "main.scss" in the static/scss folder</li>
     <li>Create a template file named base.njk in the _includes folder</li>
     <li>Paste the following code in base.njk 
       <code><pre>
@@ -61,7 +61,7 @@
 </html>
       </pre></code></li>
     <li>Create an index.md file in your src directory</li>
-    <li>Paste the following code in your new “index.md” file 
+    <li>Paste the following code in your new "index.md" file 
 <code><pre>      
 ---
 layout: 'base.njk'
@@ -122,7 +122,7 @@ title: 'Our Eleventy page'
       </pre></code>
     </li>
     <li>Then go to GitHub repository Settings>Pages in left sidebar</li>
-    <li>Click the Branch none drop menu and switch to main and then hit “Save”</li>
+    <li>Click the Branch none drop menu and switch to main and then hit "Save"</li>
     <li>By default, GitHub pages utilizes Jekyll to generate your website. However, in our case, we’re using Eleventy, so we need to notify GitHub Pages about this. To achieve this, make an empty file named .nojekyll and place it in the root directory.</li>
     <li>Then, create a .github folder in the root directory and within that folder, create another folder named workflows.</li>
     <li>Create a build.yml file in workflows and paste this code name: 
@@ -200,10 +200,10 @@ jobs:
     <li>Control+C to stop current terminal command.</li>
     <li>Generate your deploy key with the following command in the Terminal $ <code>ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""</code></li>
     <li>You will get 2 files: gh-pages.pub is a public key and gh-pages is a private key</li>
-    <li>Now go to Repository Settings>Deploy Keys and select the green button “add deploy key”</li>
+    <li>Now go to Repository Settings>Deploy Keys and select the green button "add deploy key"</li>
     <li>give it the title Public key of ACTIONS_DEPLOY_KEY, copy and paste your public key (gh-pages.pub) with the Allow write access checked </li>
-    <li>Then go to Secrets and Variables>Actions> and select the green button “New repository secret”</li>
-    <li>Name your private key ACTIONS_DEPLOY_KEY and copy and paste your private key (gh-pages) and hit the green “Add secret” button</li>
+    <li>Then go to Secrets and Variables>Actions> and select the green button "New repository secret"</li>
+    <li>Name your private key ACTIONS_DEPLOY_KEY and copy and paste your private key (gh-pages) and hit the green "Add secret" button</li>
     <li>Then delete gh-pages and gh-pages.pub from your Explorer</li>
     <li>Add more scripts to package.json file (be sure to add a comma after every script and check indentation) 
       <code><pre>
