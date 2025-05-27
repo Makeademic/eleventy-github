@@ -1,7 +1,7 @@
-*All-In-One Guide to Using Eleventy and GitHub Codespaces to Create GitHub Pages
+* All-In-One Guide to Using Eleventy and GitHub Codespaces to Create GitHub Pages
 Modified from Eleventy website to GitHub Pages with GitHub Actions by Andres Lopez
 
-**Intro to GitHub and repositories
+** Intro to GitHub and repositories
 1. Create GitHub account
 1. Open your browser, log in to GitHub and navigate to github.new 
 1. Name repository `eleventy-github`
