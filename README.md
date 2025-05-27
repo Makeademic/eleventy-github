@@ -1,7 +1,7 @@
-* All-In-One Guide to Using Eleventy and GitHub Codespaces to Create GitHub Pages
+# All-In-One Guide to Using Eleventy and GitHub Codespaces to Create GitHub Pages
 Modified from Eleventy website to GitHub Pages with GitHub Actions by Andres Lopez
 
-** Intro to GitHub and repositories
+## Intro to GitHub and repositories
 1. Create GitHub account
 1. Open your browser, log in to GitHub and navigate to github.new 
 1. Name repository `eleventy-github`
@@ -41,6 +41,7 @@ Modified from Eleventy website to GitHub Pages with GitHub Actions by Andres Lop
 1. Create an empty file named `main.scss` in the `static/scss` folder
 1. Create a template file named `base.njk` in the `_includes` folder
 1. Paste the following code in `base.njk`
+
 `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -80,23 +81,24 @@ title: 'Our Eleventy page'
 
 ## GitHub Pages
 1. Create new `.gitignore` file in root directory and paste the following code:
-`# Dependencies`
-`/node_modules`
 
-`# Misc`
-`/public`
+`# Dependencies
+`/node_modules
 
-`# Intellij`
-`/.idea`
+`# Misc
+`/public
 
-`# Sass`
-`.sass-cache/`
-`*.css.map`
-`*.sass.map`
-`*.scss.map`
+`# Intellij
+`/.idea
 
-`# Visual Studio Code`
-`/.vscode`
+`# Sass
+`.sass-cache/
+`*.css.map
+`*.sass.map
+`*.scss.map
+
+`# Visual Studio Code
+`/.vscode
 `.history`
 1. Then go to GitHub repository Settings>Pages in left sidebar
 1. Click the Branch none dropdown menu and switch to "main" and then hit "Save"
