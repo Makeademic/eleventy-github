@@ -1,7 +1,7 @@
-All-In-One Guide to Using Eleventy and GitHub Codespaces to Create GitHub Pages
+*All-In-One Guide to Using Eleventy and GitHub Codespaces to Create GitHub Pages
 Modified from Eleventy website to GitHub Pages with GitHub Actions by Andres Lopez
 
-*Intro to GitHub and repositories
+**Intro to GitHub and repositories
 1. Create GitHub account
 1. Open your browser, log in to GitHub and navigate to github.new 
 1. Name repository `eleventy-github`
@@ -58,9 +58,9 @@ Modified from Eleventy website to GitHub Pages with GitHub Actions by Andres Lop
 layout: 'base.njk'
 permalink: /
 title: 'Our Eleventy page'
----
+---`
 
-# Hello Price Lab`
+`# Hello Price Lab`
 1. Permanently delete `README.md`
 1. Open the Terminal and paste `npm run start`
 1. Hit Enter and it will run the start script
@@ -80,24 +80,24 @@ title: 'Our Eleventy page'
 
 ## GitHub Pages
 1. Create new `.gitignore` file in root directory and paste the following code:
-`# Dependencies
-/node_modules
+`# Dependencies`
+`/node_modules`
 
-# Misc
-/public
+`# Misc`
+`/public`
 
-# Intellij
-/.idea
+`# Intellij`
+`/.idea`
 
-# Sass
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
+`# Sass`
+`.sass-cache/`
+`*.css.map`
+`*.sass.map`
+`*.scss.map`
 
-# Visual Studio Code
-/.vscode
-.history`
+`# Visual Studio Code`
+`/.vscode`
+`.history`
 1. Then go to GitHub repository Settings>Pages in left sidebar
 1. Click the Branch none dropdown menu and switch to "main" and then hit "Save"
 1. By default, GitHub pages utilizes Jekyll to generate your website. However, in our case, we’re using Eleventy, so we need to notify GitHub Pages about this. To achieve this, make an empty file named `.nojekyll` and place it in the root directory.
